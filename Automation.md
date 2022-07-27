@@ -51,10 +51,9 @@ To assign a script to run, users must click the select agent procedure hyperlink
 
 Assigning scripts can be implemented to remediate an issue, collect specific data from the agent at the time of the alarm, or verify if the machine is operating normally.
 
-- ** Emails **
-Selecting the Email Recipients option as an Alarm Action __will__ send an email if checked and an alert condition is encountered to any email recipients assigned to the monitor.
-
-- The Email address of the current user __will always__ display in the Email Recipients field.
+** Emails **
+- Selecting the Email Recipients option as an Alarm Action ***will*** send an email if checked and an alert condition is encountered to any email recipients assigned to the monitor.
+- The Email address of the current user ***will always*** display in the Email Recipients field.
 - The Format Email option allows the implementation of custom messaging and settings. 
 - The "Add to Current List" option will add additional settings to an already applied monitor. This will update the email list on a monitor.
 - The "Replace List" option will remove any previous email addresses and apply the newly specified emails.
