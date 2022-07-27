@@ -685,7 +685,7 @@ _Example 2_: Weekly on Wednesdays at 10:00 am "Skip if Offline" is not selected.
 
 Behavior: Machine A1 is offline at 10:00 am. The task executes at 10:00 am and sits in the queue. When the agent checks, the task runs immediately. Any other queued tasks also run in the order in which they were placed in the queue. If the agent remains offline through the following Wednesday at 10:00 am, the next cycle will execute and sit in the queue. The same task may run multiple times on check-in if the agent remains offline throughout multiple schedule cycles.
 
-### Scheduled vs. Immediate###
+### Scheduled vs. Immediate ###
 
 Tasks can be scheduled to run at a future date or time with or without recurrence. This is done through the Scheduler Utility we've been exploring. However, there are instances where you may want to run a task immediately. When troubleshooting, you can choose to run a task "now" without affecting the existing recurrence schedule.  
 
@@ -693,13 +693,13 @@ While the scheduler can be configured to run a scheduled task immediately, launc
 
 Run Now will appear next to the Schedule button for those tasks that support this particular function. When Run Now is selected, the task will be immediately queued, even if the agent is offline. The task will run as soon as the agent is checking in and once any other previously queued tasks are completed.
 
-### Scheduler Variations###
+### Scheduler Variations ###
 
 The Scheduler utility is common in many modules throughout the VSA. However, the Scheduler may be slightly customized for some functions. For example, the Initial Update function of the **Patch Management** module only supports the recurrence type of "Once" because an Initial Update should not be scheduled to run on a recurring basis.  
 
 The Run Audit function of the Audit module includes the ability to select which type of audit is to be scheduled so administrators and technicians can define the appropriate schedule for each audit type. These differences are based on the intended function of each function. However, the general functionality and use of the Scheduler utility will be the same throughout the VSA.
 
-### Time Zone Considerations###
+### Time Zone Considerations ###
 
 Time is a complex concept. In many cases, the endpoint, the Kaseya Server, and the VSA user scheduling a task may be in different time zones. Complicating the issue further, some global locations observe Daylight Saving Time (DST) during parts of the year while others do not. Even among areas where DST is observed, the dates for DST may vary from one location to another.  
 
@@ -709,7 +709,7 @@ Due to these variations, Kaseya provides you the ability to view schedules in th
 
 ! Time Zone Offset from the System module and the Time Preference area of the Scheduler.
 
-### Time Zone Examples###
+### Time Zone Examples ###
 
 KServer time: 6:00 PM UTC (aka GMT or Zulu Time)
 Browser time: 1:00 PM Eastern (US) Standard Time (EST)
@@ -719,13 +719,13 @@ To run a task after hours on the agent, choose "schedule in agent time" and, for
 
 _Example:_ It's 10:00 am in your local time zone and you've been instructed to install a software package on all managed computers. The task must be completed in the next 2 hours. Your agents are spread around the globe. If you were to schedule the task to begin at 10:15 am with a 90 minute distribution window, but you chose to schedule based on the agent time, the machines within your time zone would be scheduled to run within the next 90 minutes. However, agents in other time zones would be scheduled to start the process within 90 minutes of their 10:00 am. That might be several hours from now. In this case, you'll want a task to run on a selection of computers at the exact same time, regardless of what time it might be in the agent's time zone. To accomplish this, run the task in server time (do not select Agent time).
 
-## Import and Export##
+## Import and Export ##
 
 The Kaseya VSA offers several tools to create individual content such as Agent Procedures, Monitor Sets, Reports, and Policies to name a few.
 
 This content can be exported and/or imported from several locations within the VSA. The **Import Center** is the recommended tool included within the System Module that allows individualized content to be exported or imported within the VSA. It also allows bulk exporting and importing.
 
-### How Does it Work?###
+### How Does it Work? ###
 
 Import Center allows you to import or export multiple items or multiple item types of user-defined data structures into a single XML file. This XML file then contains all the content that was defined for import or export.
 
@@ -733,7 +733,7 @@ Import Center allows you to import or export multiple items or multiple item typ
 
 ! Modifications can be made directly to the XML which will have an *immediate* effect on content when uploaded through Import Center.
 
-### Benefits###
+### Benefits ###
 
 Why is this beneficial?
 
@@ -741,13 +741,13 @@ Why is this beneficial?
 - The content found in the Kaseya Community can be exported and shared with others. Further, use the Import Center to import community content.
 - Content and automation solutions can be migrated between VSAs or testing environments.
 
-### Imports###
+### Imports ###
 
 Importing an XML file is as simple as clicking on "New Import", selecting your file, and allowing the VSA to process it.
 
 If desired, you can delete import entries, review any error messages, and set your settings via the "Edit Settings" button. This also controls the number of days to retain the import logs.
 
-### Exports###
+### Exports ###
 
 Exporting VSA files is as simple as clicking on "New Export", giving it a name, and selecting the Export Type of your choice. Then, either click "Continue" to keep adding objects to your export, or "Export" when finished.
 
