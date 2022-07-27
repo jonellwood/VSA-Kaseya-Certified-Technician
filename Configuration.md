@@ -136,7 +136,7 @@ The **Discovery > Networks > By Agent** page allows you to discover devices on t
 
 The Discovered Devices page shows computers and devices discovered using Discovery by Network and Discovery by Agent. Use this page to install agents on discovered computers. 
 
-## Topology Map
+## Topology Map ##
 
 The Topology Map is an interactive map that displays information about networks, devices within a network, types of devices, device status, and how they are connected. All connections between devices are determined by data collected using the SNMP protocol.
 
@@ -208,7 +208,7 @@ The Kaseya Agent's Working Directory (kworking) is the folder on each managed ma
 
 The Kaseya Server, also known as "KServer", will use the Working Directory folder on managed machines to transfer and store files related to Kaseya processes, data collection, monitoring, protection, and several other tasks.
 
-###Best Practices###
+### Best Practices ###
 
 **Windows**
 
@@ -238,7 +238,7 @@ The Kaseya Server, also known as "KServer", will use the Working Directory folde
 ! It is also necessary that the Working Directory folder is not hidden. If hidden, Kaseya may not be able to complete some automated tasks, which could lead to undesirable results when running tasks, failures of agent procedures, and the inability to complete installations and properly monitor the managed machine.
 
 
-###Setting the Working Directory###
+### Setting the Working Directory ###
 
 The Working Directory is required for the collection and distribution of files between the agent and the Kaseya Server. The Kaseya Agent will automatically create the kworking folder based on the configuration defined in the Agent module. 
 
@@ -247,7 +247,7 @@ Administrators can use the default directory or can define a customized folder. 
 1. Navigate to **Agent > Manage Agents** ... by default you may not see the *Working Directory* column
 2. Click on the down arrow to add a column
 
-###Configuring the Agent Menu###
+### Configuring the Agent Menu ###
 
 The Agent Menu page in the Agent module provides you the ability to select which options appear in the Agent Menu on the managed endpoint. Some of the options, such as About and Contact Helpdesk, can be customized to reflect a corporate brand. 
 
@@ -255,14 +255,14 @@ Once you've decided what options you will make visible to the end-user, simply u
 
 You will then see the text for your agent in the VSA turn red. This means that the changes are pending until the next time the agent checks in. At the next check-in, it takes only a few seconds for the endpoint to apply your new settings which will be then reflected in the UI.
 
-##Setting Credentials##
+## Setting Credentials ##
 
 The Set Credential function in the Agent module allows you to define the username and password to be leveraged for some Kaseya-invoked processes. 
 
 The defined credentials are used to impersonate the user login for access or execution of resources and tasks that require administrator privileges. This includes access to a file share or execution of an installer.
 
 
-###Best Practices###
+### Best Practices ###
 
 - The Set Credential account must exist as a Local User Account or must be an existing Domain User Account. This function does not create the account on the machine or domain.  
 - When using a Local User account, the Set Credential should be a member of the Local Administrators Group to ensure the Kaseya Agent can successfully complete assigned tasks which may require administrator rights. 
@@ -279,13 +279,13 @@ Navigate to **Agent > Manage Agents** and select the agent youd like to set cred
 
 ! You can set the same credentials on multiple agents as long as the credentials exist on each of the managed endpoints.
 
-##Updating the Agent##
+## Updating the Agent ##
 
 Periodically, it is necessary to update the agent software that resides on a managed machine. This update does not automatically occur when the Kaseya Server is upgraded - you must schedule the agent update on managed machines.
 
 Usually, with every VSA patch release, there is a new agent version that comes with it. We strongly recommend that you update your agents when a new agent version is released.
 
-###Best Practices###
+### Best Practices ###
 
 - The Kaseya Agent should always be at the version the Patch Release Notes link specifies.
 - Schedule these agent updates when new software is released. Agent updates are released to add enhancements and address defects or vulnerabilities.
@@ -295,7 +295,7 @@ Navigate to **Agent > Manage Agents** by default you should see the agent versio
 
 ! If you are an On-Premise Customer, you will have access to the Automatic Update page in the Agent module. This page allows you to automatically update your agents to the latest version. Note that scheduling is staggered to avoid bandwidth issues. 
 
-##Agent VSA Settings##
+## Agent VSA Settings ##
 
 The Kaseya VSA includes several logs used to record various activities. Many of these logs are related to the interaction between the Kaseya Server and the managed machines.
 
@@ -303,7 +303,7 @@ You can define the length of time these log entries are retained in **Agent > Lo
 
 ! Kaseya agent logs default to a 30 or 31 day retention period. You can adjust these settings depending on the needs of your company.
 
-###Log Types###
+### Log Types ###
 "Agent > Agents > Agent Logs"
 
 **Configuration Changes**
@@ -353,7 +353,7 @@ This log records the active and inactive time of the agent. If the number of day
 
 Note: Kaseya recommends the Agent Uptime Log be configured to collect at least one day of data, though you may choose to retain these logs for longer periods. This log is useful in troubleshooting agent check-in issues and for reporting overall uptime.
 
-###Retention Periods###
+### Retention Periods ###
 
 **Extended Retention**
 
@@ -367,7 +367,7 @@ A shorter retention period may be sufficient for some machines or for some log t
 
 ! Example: A client or manager expects to receive a report of all Remote Control activity against specific managed machines for each month but the retention period for the Remote Control log is set for 15 days. It would be necessary to schedule a Remote Control Log report to run approximately twice a month to gather a full month worth of data. Reports will be covered in an upcoming lesson.
 
-###Event Logs###
+### Event Logs ###
 
 Microsoft Windows Event Logs can be monitored and reviewed from within the VSA. You may elect to enable the collection to allow for reporting.
 
@@ -375,7 +375,7 @@ Events tab in the Agent > Agent Logs page.
 
 !The collection of these log entries to the database is not required for review.  
 
-###Agent Account in the VSA###
+### Agent Account in the VSA ###
 
 You will find several buttons in **"Agent > Manage Agents"** that will allow you to interact with the agent. For now, we will cover the ones under "Manage".
 
@@ -433,7 +433,7 @@ Suspends/resumes all agent operations such as agent procedures, monitoring, and 
 
 ! Note: Suspending an agent does not release the associated agent license. You will need to use the Delete Agents function to reclaim agent licenses.
 
-##Lan Cache##
+## Lan Cache ##
 
 The LAN Cache page designates a machine to act as a file share for other endpoints on the same LAN. This process speeds up delivery to various machines, reducing network bandwidth issues. 
 
@@ -450,7 +450,7 @@ LAN Cache configures a file source as follows:
 
 ! Created accounts are given a unique name (FSAdminxxxxxxxxx where x is a digit) with an automatically generated password. The generated password contains 15 randomly selected characters and contains at least one of the following character types: uppercase letters, lowercase letters, numbers (0 - 9) and non-alphanumeric characters.
 
-###Creating a LAN Cache###
+### Creating a LAN Cache ###
 
 To assign a LAN cache, select the desired agent and click on "Add LAN Cache". Keep in mind that the machine functioning as a LAN cache will only service machines on the same network.
 
@@ -460,7 +460,7 @@ To assign a LAN cache, select the desired agent and click on "Add LAN Cache". Ke
 4. If auto-generated administrator credentials are selected, an administrator credential is created for you when the LAN cache is created. A local administrator credential is created unless the machine is a domain controller. If the machine is a domain controller, use the latter option to utilize an existing domain administrator's credentials.
 5. Select the drive to create the LAN cache file share on.
 
-###Assigning a LAN Cache###
+### Assigning a LAN Cache ###
 
 Navigate to the **Agent > Configure Agents > Assign LAN Cache** page to assign and remove machines from a selected LAN cache. After assigning to the corresponding machines, the agents will show as follows in the VSA.
 
@@ -468,11 +468,11 @@ Here you will also be able to test the assigned LAN cache functionality and clea
 
 ! After LAN cache assignment, you should test the assigned LAN cache functionality. You will see the test in "Pending" status until it passes or fails. Remember that you can clear any tests at any time by clicking the Clear Pending button.
 
-##Agent Information##
+## Agent Information ##
 
 Every Kaseya Agent that is installed will report back data and informational records to the Kaseya VSA Server. This information is stored and associated with the individual agent. The data may then be used by the Kaseya Server to process certain requests or the data may be logged for tracking purposes
 
-###What is Kasaya Agent Information?###
+### What is Kasaya Agent Information? ###
 
 Kaseya Agent Information is any log or agent/machine specific information associated with an individual computer or machine.
 
@@ -492,13 +492,13 @@ These records can provide unique and important information about individual endp
 
 This information can be used to track agent-specific activity, monitor configuration changes, and review agent or event logs.
 
-###Quickview###
+### Quickview ###
 
 Quickview provides a limited window-based version of Kaseya Live Connect. To access Quickview, hover over any Agent icon located inside the Kaseya VSA.
 
 ! By default, moving the cursor outside of the Quickview window will make the Quickview window disappear. Don't worry though, you can pin it and even navigate to a different module without losing sight of it!
 
-###Column Sets###
+### Column Sets ###
 
 The Manage Agents page provides an overall summary for every Kaseya Agent in the VSA and you can add or remove columns as needed. Alternatively, you can create Column Sets to allow for easier access to these columns and summaries without having to add or remove them every time you need them.
 
@@ -510,7 +510,7 @@ To create a new Column Set, simply drag and drop the available columns from the 
 
 You can also export the results from the page/grid, refresh it, or simply reset to the original columns.
 
-###Views###
+### Views ###
 
 Agent Views allow filtering and sorting options within the VSA to classify and view certain machines. This comes in handy whenever you'd like to look for a group of agents matching specific criteria.
 
@@ -522,7 +522,7 @@ Following the example used above, you want to identify Windows systems that have
 
 !Once you click Save you will see the background page refresh. This doesn't mean that the actual Manage Agents grid will show you updated results; you'd need to select the view manually from the drop-down menu after exiting out of the View Definitions pop-up window.
 
-##Agent Profiles##
+## Agent Profiles ##
 
 Agent profiles have the capability to associate and store individual agent settings and information within the Kaseya VSA. Type of information that can be stored on an Agent profile include:
 
@@ -530,7 +530,7 @@ Agent profiles have the capability to associate and store individual agent setti
 - Agent Profiles also allows the option for special icon badges to indicate critical or important machines.
 - Special instructions can be noted for individual or unique machines.
 
-###Agent Profile in the VSA###
+### Agent Profile in the VSA ###
 
 To add a badge and special instructions to an Agent, follow these steps below:
 
@@ -542,7 +542,7 @@ To add a badge and special instructions to an Agent, follow these steps below:
 
 ! Once you've added badges and/or special instructions on your agent(s), you will see the notes next to the Machine ID and the badge overlapping with the Agent icon. Now, if you hover over the agent icon to open up Quickview, the first thing you will see is the instructions you've just added. This comes in handy when it comes to giving other VSA users a head's up about a particular agent or group of agents.
 
-##Branding the Agent Icon##
+## Branding the Agent Icon ##
 
 Branding the Agent Icon allows your end-users to feel a sense of familiarity while increasing their connection to your company's reputation. 
 
@@ -556,17 +556,17 @@ Your users will be more comfortable seeing their MSP or internal IT Department's
 
 - Linux - Linux icons must be in .png format and the color depth must not exceed 256 colors. A size of 24x24 pixels is recommended.
 
-###Setting the Agent Icons###
+### Setting the Agent Icons ###
 
 The **Site Customization** page, under the **System** Module, gives you the ability to upload custom Agent Icons to the Kaseya VSA.
 
-###Assigning the Agent Icons###
+### Assigning the Agent Icons ###
 
 To assign custom Agent Icons simply click the Edit button and decide which OS to modify: Windows, Mac, or Linux. 
 
 You can click on the camera icon to search for the files you want to replace the current agent icon(s) with.
 
-###Updating your Agents###
+### Updating your Agents ###
 
 Once the icon(s) is uploaded to the Kaseya VSA, downloaded agent packages going forward will have the updated agent icons for new agent deployments.
 
@@ -574,7 +574,7 @@ However, an Agent Update is required to push the custom Agent Icons to the endpo
 
 ! It’s required that you check the "Force update even if agent is at version..." checkbox to update agents that are already at the current version allowing the new icon(s) to be applied. If the changes don't take effect.
 
-##Branding the VSA##
+## Branding the VSA ##
 
 The Kaseya VSA can be branded to reflect specific branding, colors, and even philosophy. This action reinforces the corporate brand throughout the Kaseya VSA and the customers are using VSA. 
 
@@ -610,24 +610,24 @@ You are able to brand the following elements in the SAAS (Software As A Service)
 
 - Kaseya Deploy Header
 
-##Color Scheme##
+## Color Scheme ##
 
 The Kaseya VSA color schemes are predefined and built for immediate use. 14 default color schemes are available within the Kaseya VSA. Find the one that suits your business the most!
 
 It's only a matter of navigating to the Color Scheme page, selecting your desired color, and clicking the +Set Scheme button.
 
-###Changing the Logon Page (On-Prem Only)###
+### Changing the Logon Page (On-Prem Only) ###
 
 Custom imaging and wording can also be used to brand the Kaseya VSA. Customize the VSA Logo in "System > Customize > Site Customization".
 
 ! The path you choose for the Background Image must be relative to the Webpages directory, Webpages\Access directory, or a fully-formed URL.
 ! The logo will reflect across the header of the VSA on every page.
 
-###Site Header###
+### Site Header ###
 
 Note that the new VSA UI no longer supports Title next to the logo. Further, please keep in mind that the Favorites Icon is not supported in a Cloud-based VSA. 
 
-###Creating a Unique Logon Page###
+### Creating a Unique Logon Page ###
 
 Creating a unique logon page will require a custom .html page that replaces the "DefaultContent.htm" file. The replacement .html file will need to be placed in the :\Kaseya\WebPages\Access directory. Modifying "DefaultContent.htm" directly is not recommended as this file will be overwritten during patches and upgrades.
 
@@ -657,15 +657,15 @@ Once the new logon page .html file is placed in the access directory and any ass
 
 ! All files must be placed on the Kaseya Server machine locally within the Kaseya install directory.
 
-##Schedule and Execute Tasks##
+## Schedule and Execute Tasks ##
 
 The Scheduler Utility allows you to define when specific tasks should run on managed machines and whether those tasks should recur at defined intervals. 
 
 To access the Scheduler, you must first select at least *one* agent. The schedule defined will then be applied to the agents selected from the agent list.
 
-###Scheduler Options###
+### Scheduler Options ###
 
-###"Distribution Window" Examples###
+### "Distribution Window" Examples ###
 
 Assuming there are five endpoints selected when the Scheduler is launched:
 
@@ -675,7 +675,7 @@ A schedule with a 'Run At' time of 10:00 am and a 10 minute distribution window 
 
 A weekly schedule with a 'Run At' time of 10:00 am, a three-day distribution window, and with only Monday selected will cause all machines to be scheduled between 10:00 am on Monday and 11:59:59 on Wednesday. 
 
-###"Skip if Offline" Examples###
+### "Skip if Offline" Examples###
 
 _Example 1_: Weekly on Wednesdays at 10:00 am and "Skip if Offline" is selected. 
 
@@ -685,7 +685,7 @@ _Example 2_: Weekly on Wednesdays at 10:00 am "Skip if Offline" is not selected.
 
 Behavior: Machine A1 is offline at 10:00 am. The task executes at 10:00 am and sits in the queue. When the agent checks, the task runs immediately. Any other queued tasks also run in the order in which they were placed in the queue. If the agent remains offline through the following Wednesday at 10:00 am, the next cycle will execute and sit in the queue. The same task may run multiple times on check-in if the agent remains offline throughout multiple schedule cycles.
 
-###Scheduled vs. Immediate###
+### Scheduled vs. Immediate###
 
 Tasks can be scheduled to run at a future date or time with or without recurrence. This is done through the Scheduler Utility we've been exploring. However, there are instances where you may want to run a task immediately. When troubleshooting, you can choose to run a task "now" without affecting the existing recurrence schedule.  
 
@@ -693,13 +693,13 @@ While the scheduler can be configured to run a scheduled task immediately, launc
 
 Run Now will appear next to the Schedule button for those tasks that support this particular function. When Run Now is selected, the task will be immediately queued, even if the agent is offline. The task will run as soon as the agent is checking in and once any other previously queued tasks are completed.
 
-###Scheduler Variations###
+### Scheduler Variations###
 
 The Scheduler utility is common in many modules throughout the VSA. However, the Scheduler may be slightly customized for some functions. For example, the Initial Update function of the **Patch Management** module only supports the recurrence type of "Once" because an Initial Update should not be scheduled to run on a recurring basis.  
 
 The Run Audit function of the Audit module includes the ability to select which type of audit is to be scheduled so administrators and technicians can define the appropriate schedule for each audit type. These differences are based on the intended function of each function. However, the general functionality and use of the Scheduler utility will be the same throughout the VSA.
 
-###Time Zone Considerations###
+### Time Zone Considerations###
 
 Time is a complex concept. In many cases, the endpoint, the Kaseya Server, and the VSA user scheduling a task may be in different time zones. Complicating the issue further, some global locations observe Daylight Saving Time (DST) during parts of the year while others do not. Even among areas where DST is observed, the dates for DST may vary from one location to another.  
 
@@ -709,7 +709,7 @@ Due to these variations, Kaseya provides you the ability to view schedules in th
 
 ! Time Zone Offset from the System module and the Time Preference area of the Scheduler.
 
-###Time Zone Examples###
+### Time Zone Examples###
 
 KServer time: 6:00 PM UTC (aka GMT or Zulu Time)
 Browser time: 1:00 PM Eastern (US) Standard Time (EST)
@@ -719,13 +719,13 @@ To run a task after hours on the agent, choose "schedule in agent time" and, for
 
 _Example:_ It's 10:00 am in your local time zone and you've been instructed to install a software package on all managed computers. The task must be completed in the next 2 hours. Your agents are spread around the globe. If you were to schedule the task to begin at 10:15 am with a 90 minute distribution window, but you chose to schedule based on the agent time, the machines within your time zone would be scheduled to run within the next 90 minutes. However, agents in other time zones would be scheduled to start the process within 90 minutes of their 10:00 am. That might be several hours from now. In this case, you'll want a task to run on a selection of computers at the exact same time, regardless of what time it might be in the agent's time zone. To accomplish this, run the task in server time (do not select Agent time).
 
-##Import and Export##
+## Import and Export##
 
 The Kaseya VSA offers several tools to create individual content such as Agent Procedures, Monitor Sets, Reports, and Policies to name a few.
 
 This content can be exported and/or imported from several locations within the VSA. The **Import Center** is the recommended tool included within the System Module that allows individualized content to be exported or imported within the VSA. It also allows bulk exporting and importing.
 
-###How Does it Work?###
+### How Does it Work?###
 
 Import Center allows you to import or export multiple items or multiple item types of user-defined data structures into a single XML file. This XML file then contains all the content that was defined for import or export.
 
@@ -733,7 +733,7 @@ Import Center allows you to import or export multiple items or multiple item typ
 
 ! Modifications can be made directly to the XML which will have an *immediate* effect on content when uploaded through Import Center.
 
-###Benefits###
+### Benefits###
 
 Why is this beneficial?
 
@@ -741,13 +741,13 @@ Why is this beneficial?
 - The content found in the Kaseya Community can be exported and shared with others. Further, use the Import Center to import community content.
 - Content and automation solutions can be migrated between VSAs or testing environments.
 
-###Imports###
+### Imports###
 
 Importing an XML file is as simple as clicking on "New Import", selecting your file, and allowing the VSA to process it.
 
 If desired, you can delete import entries, review any error messages, and set your settings via the "Edit Settings" button. This also controls the number of days to retain the import logs.
 
-###Exports###
+### Exports###
 
 Exporting VSA files is as simple as clicking on "New Export", giving it a name, and selecting the Export Type of your choice. Then, either click "Continue" to keep adding objects to your export, or "Export" when finished.
 
