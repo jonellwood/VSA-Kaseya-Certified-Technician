@@ -5,4 +5,4 @@ Notes from VSA Certification Prorgam
 
 2. [Configuration](Configuration.md)
 
-3. [Redediation](Remediation.md)
+3. [Remediation](Remediation.md)
