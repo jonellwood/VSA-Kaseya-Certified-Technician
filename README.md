@@ -6,3 +6,5 @@ Notes from VSA Certification Prorgam
 2. [Configuration](Configuration.md)
 
 3. [Remediation](Remediation.md)
+
+4. [Automation](Automation.md)
