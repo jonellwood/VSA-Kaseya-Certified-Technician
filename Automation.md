@@ -146,7 +146,7 @@ Microsoft PerfMon Counters define specific monitoring information. The Logman Ut
 
 The agent will leverage logman commands and create counters for each monitor set. This data history will be distributed to the Kaseya Server for reviewing, analyzing, and alarming. On most Microsoft Operating Systems, there is a 64 counter limit for an endpoint.
 
-Available counters can be found in Microsoft PerfMon on the endpoint, or using the `code`typeperf`code` command.
+Available counters can be found in Microsoft PerfMon on the endpoint, or using the `typeperf` command.
 
 ### Windows Services and Processes
 
@@ -240,7 +240,7 @@ Event Sets are defined parameters or a set of rules used to match against event 
 
 Each Event Set can have multiple rules or lines that will either be ignored or trigger an alarm. Event Sets must have defined rules or filters within them to match specific event logs. Filters must be matched exactly to the event log. Therefore, if a filter is entered incorrectly by just one character, digit, or space, the alarm will not be triggered.
 
-! **Testing Event Sets**: It is recommended to test Event Sets prior to deployment to ensure they function correctly. Microsoft Windows has an `code`eventcreate`code` command allowing you to create generic or fake Event Logs within the Event Viewer. This can be used to test if Event Log Alerts are working or if a specific Event Set is working as designed.
+! **Testing Event Sets**: It is recommended to test Event Sets prior to deployment to ensure they function correctly. Microsoft Windows has an `eventcreate` command allowing you to create generic or fake Event Logs within the Event Viewer. This can be used to test if Event Log Alerts are working or if a specific Event Set is working as designed.
 
 
 
