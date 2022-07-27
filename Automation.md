@@ -243,12 +243,3 @@ Each Event Set can have multiple rules or lines that will either be ignored or t
 ! **Testing Event Sets**: It is recommended to test Event Sets prior to deployment to ensure they function correctly. Microsoft Windows has an `eventcreate` command allowing you to create generic or fake Event Logs within the Event Viewer. This can be used to test if Event Log Alerts are working or if a specific Event Set is working as designed.
 
 
-
-
-
-
-
-
-
-
-
