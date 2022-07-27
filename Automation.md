@@ -22,9 +22,9 @@ The ATSE code can appear in several different monitoring sections as each monito
 
 The ATSE code will always be located at the top of any page where monitors can be assigned to endpoints.
 
-**Assigning Alarm Actions from the ATSE code can impact the Kaseya VSA, Clients, Agents, and Colleagues. **
+** Assigning Alarm Actions from the ATSE code can impact the Kaseya VSA, Clients, Agents, and Colleagues. **
 
-- **Alarms**
+#### Alarms
 
 Applying alarms as an Alarm Action creates an alarm which can be found on the **Monitor > Alarm Summary** page.
 
@@ -34,7 +34,7 @@ If an alarm is not applied as an Alarm Action, there will be *no* records of the
 
 Alarms can help quickly identify agents that require attention. However, excessive amounts of alarm creation can cause a negative impact on the performance of the Kaseya VSA.
 
-- **Tickets** 
+### Tickets
 
 Applying the Create Ticket Alarm Action __will__ create a new ticket within Service Desk or Ticketing modules for every monitor that triggers an Alarm State.
 
@@ -44,7 +44,7 @@ Tickets will contain the alarm information that is specified in the Format Email
 
 Creating tickets for excessive or loud monitors can flood the Ticketing or Service Desk modules.
 
-- **Scripts** 
+#### Scripts 
 Running a Script or Agent Procedure after an Alarm State triggers is a very powerful alarm action. Desired scripts can be executed on the specific agent that triggers the alarm or another agent within the Kaseya VSA.
 
 To assign a script to run, users must click the select agent procedure hyperlink and then choose an agent procedure that is accessible to this user. Then, a machine ID must be selected that will run the Agent Procedure. The machine executing the procedure must still be operational and checking into the VSA.
@@ -95,6 +95,8 @@ These monitor tools can identify both Event-based Monitoring and State-based Mon
 ## Monitor Sets
 
 ### Overview
+
+
 
 
 
