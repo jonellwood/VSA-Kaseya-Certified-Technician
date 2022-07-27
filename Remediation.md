@@ -1,8 +1,8 @@
-#Remediation#
+# Remediation #
 
-##Audit Information##
+## Audit Information ##
 
-###How are Audits Useful?###
+### How are Audits Useful? ###
 
 Audits help you to gain insight and knowledge of inventory, devices, hardware, software, configurations, licenses, network settings, and connected devices.
 
@@ -15,7 +15,7 @@ Audits allow easy management of machine equipment and software in an environment
 - System Information from DMI and SMBIOS - Such as PC make, model, serial number, motherboard type, and any other detected BIOS information.
 - Current Network Settings - Such as Local IP address, Connection Gateway IP address, DNS, WINS, DHCP, and MAC address.
 
-###Types of Audits###
+### Types of Audits ###
 
 To see the different types of audits available, navigate to **Audit > Collect Data > Run Audit > Run Audit Now** in the side menu
 
@@ -29,11 +29,11 @@ To see the different types of audits available, navigate to **Audit > Collect Da
 - Latest Audits should be scheduled on a more frequent basis to detect recent changes on machines. Once a week is recommended. 
 - System Information audits should be executed during the initial installation of the agent and only require additional executions after any hardware changes.
 
-###Running/Scheduling Audits###
+### Running/Scheduling Audits ###
 
 **Audits can be scheduled to run on a recurring basis or executed on demand.**
 
-###Reviewing Audit Information###
+### Reviewing Audit Information ###
 
 To view audit information per machine, navigate to "Audit > View Individual Data > Machine Summary", select the agent from the list, and click on the available tabs.
 
@@ -41,7 +41,7 @@ The **Machine Summary** page shows you audit information for a single machine at
 
 ! The various tabs shown below allow you to select the type of audit information you'd like to review for a single machine. The tabs available are **Software, Hardware, Agent Information, Patch Status, Remote Control, Documents** and **Users** of the specific machine. When clicking each tab, sub-tabs will then display.
 
-###Manually Editing Machine Data###
+### Manually Editing Machine Data ###
 
 If needed, you can manually edit machine data for System Info Audits. 
 
@@ -51,7 +51,7 @@ The pop-up you will receive when clicking the **Edit Machine Data** button. Here
 
 ! You will also be able to enter data for Custom Fields which we will cover in an upcoming lesson.
 
-###Installed Applications###
+### Installed Applications ###
 
 The "Installed Applications" page lists all applications found during the Latest Audit for a selected agent.
 
@@ -59,7 +59,7 @@ The **Installed Applications** page showing installed applications for the selec
 
 ! You can filter out by any of the given columns. Simply click on the "down" arrow, go to **Filters** and type the Application, Description, Version string, etc.
 
-###Add/Remove###
+### Add/Remove ###
 
 The "Add/Remove" page displays the programs listed in the Programs and Features window of the managed machine. The information shown on this page is collected when a Latest Audit is performed. 
 
@@ -67,13 +67,13 @@ The **Add/Remove** page showing installed software for the selected agent
 
 ! You can leverage the **Uninstall String** column to reference the string you'd use for uninstalling the software from the managed machine.
 
-##Custom Fields##
+## Custom Fields ##
 
-###Overview###
+### Overview ###
 
 The Kaseya VSA automatically collects data regarding each managed machine through the audit process you learned about in the previous lesson. However, there is some information you may want to track and report on that is not automatically collected by Kaseya. This is when Custom Fields come in handy!
 
-###Creating Custom Fields###
+### Creating Custom Fields ###
 
 You can maintain an unlimited amount of Custom Fields information about managed machines. They are supported in Views, Agent Procedures, and Reports. However, note that custom reports *do not* support more than 100 custom fields. 
 
@@ -81,7 +81,7 @@ You can create, rename, and delete Custom Fields via the **Machine Summary** pag
 
 Custom Fields button can be located in **Audit > View Individual Data > Machine Summary**.
 
-###Types of Custom Fields###
+### Types of Custom Fields ###
 
 **String** - Used for text-based data.
 **Number** - Used for numerical data. If your field requires text and numerical entries, choose the String data type.
@@ -91,7 +91,7 @@ Custom Fields button can be located in **Audit > View Individual Data > Machine 
 
 ! When using the **Date Time** and **Date** data types, the time zone of the VSA Administrator/Technician can impact the date they see as the value for the Custom Field. 
 
-###Defining Custom Fields Data###
+### Defining Custom Fields Data ###
 
 As you learned in previous lessons, you can manually edit machine data for System Info Audits and Custom Fields also. Click the "Edit Machine Data" button to do so.
 
@@ -99,7 +99,7 @@ This edit pop-up window allows you to edit any of the Machine Data collected by 
 
 ! Rather than having to manually enter the data for the desired Custom Field, use Agent Procedures to populate Custom Fields via the **updateSystemInfo** step. More details can be found within this KB article and Agent Procedures will be covered in an upcoming lesson.
 
-###Bulk Editing Custom Fields###
+### Bulk Editing Custom Fields ###
 
 In some cases, you may want to enter the same data value into a Custom Field for several machines at once. This is possible via the **Bulk Edit Custom** button.
 
@@ -107,7 +107,7 @@ Select the desired agents and click the **Bulk Edit Custom** button when you're 
 
 When a Custom Field is selected from the drop-down menu, you can either re-use a value used on other machines or update the value. When ready, click the **Save** button.
 
-###Renaming and Deleting Custom Fields###
+### Renaming and Deleting Custom Fields ###
 
 Renaming a Custom Field is as simple as clicking the "Rename Custom Field" button and selecting the field to be renamed.
 
@@ -121,21 +121,21 @@ The **Delete Custom Field** pop-up window will allow you to delete a Custom Fiel
 
 ! **All data contained in the Custom Field for any machine is lost.**
 
-##Audit Manage Credentials##
+## Audit Manage Credentials ##
 
-###Overview###
+### Overview ###
 With the Managed Credentials function, you can configure multiple credentials for documentation purposes, create new local credentials on the managed endpoint, and assign credentials for usage in the Kaseya VSA. 
 
 The credentials can be configured on an Organizational, Machine Group, or an individual agent level. Comparatively, the Set Credentials function allows you to set a pre-existing credential that will be used in the Kaseya VSA on an individual basis.
 
-###Best Practices###
+### Best Practices ###
 
 - Use Managed Credentials to have one location to store credentials for all assets and devices.
 - Use passwords that meet the required environmental complexity.
 - Stay within limits. For example, Windows XP machines have a 10-character password limit.
 - Generally, set managed credentials on the Organization or Machine Group level. Set the managed credentials on the individual endpoint as the *exception* rather than the rule.
 
-###Creating Managed Credentials###
+### Creating Managed Credentials ###
 
 Managed Credentials can be used to create, delete, and view credentials for Organizations, Machine Groups, and individual Machines to organize access rights to machines. 
 
@@ -153,19 +153,19 @@ Once the Managed Credential is in place, the Organization, Machine Group(s), and
 
 ! You can edit the credentials at any time (**Edit** button), view them (**View** button) which will reveal the password, and/or delete them (**Delete** button).
 
-###Reviewing Credential Logs###
+### Reviewing Credential Logs ###
 
 The Credential Log page provides an audit log of the VSA users who create, modify, and delete credentials on the "Audit > View Assets" and "Manage Credentials" pages.
 
 Use the **Credential Log** page to view all activities that have occurred under each credential to determine if any modifications have been made by a Kaseya user. It can also help review a variety of other information including which users are accessing the system at certain times of the day.
 
-##View Assets##
+## View Assets ##
 
-###Overview###
+### Overview ###
 
 An asset is *any device* within an environment or network. There are two types of assets in the environment: a managed asset and a non-managed asset.
 
-###Types of Assets###
+### Types of Assets ###
 
 - **Managed Assets**: Computers and mobile devices that have an agent installed on them are always considered *managed assets* and display on the **View Assets** page for as long as the agent is installed.
 
@@ -173,7 +173,7 @@ An asset is *any device* within an environment or network. There are two types o
 
 Example assets under **Audit > Asset > View Assets**.
 
-###Viewing Assets###
+### Viewing Assets ###
 
 The **View Assets** page provides a detailed list of functionality enabled on an asset. This page is populated by Discovery scans of *networks* and *domains*. Here, you can view assets, demote them, change their group, and refresh the grid.
  
@@ -187,7 +187,7 @@ The **View Assets** page provides a detailed list of functionality enabled on an
 
 -**Credentials**: This tab sepecifies credentials by individual asset - these can be referenced by a VSA user when accessing a machine or device.
 
-###Creating Non-Managed Assets###
+### Creating Non-Managed Assets ###
 
 The **Demote Asset to Device** button allows you to remove a selected device as a managed asset. However, computers and mobile devices that have agents installed on them *cannot* be demoted. 
 
@@ -210,9 +210,9 @@ Routers, printers, firewalls, and other devices on networks can be detected, mon
 
 - **Info Center** provides a robust reporting tool that can provide detailed asset feedback and data for clients or management.
 
-##Remote Access Architecture##
+## Remote Access Architecture ##
 
-###Overview###
+### Overview ###
 
 The Kaseya VSA delivers the fastest, most reliable remote management solution in the industry. IT professionals can access and manage computers from anywhere at near-instantaneous connect times with extraordinary reliability, even over high latency networks.
 
@@ -226,7 +226,7 @@ The Kaseya VSA delivers the fastest, most reliable remote management solution in
 
 ! KRC utilizes **Peer-To-Peer (P2P)** connectivity whenever network conditions allow it. If the P2P connection is not possible, a **relay connection** is used instead.
 
-###Features and Requirements###
+### Features and Requirements ###
 
 **Kaseya Remote Control Features**
 
@@ -250,7 +250,7 @@ The Kaseya VSA delivers the fastest, most reliable remote management solution in
 
 - A log entry is created in **Agent > Agent Logs > Kaseya Remote Control** log each time a session is initiated.
 
-###User Role and Machine Policies###
+### User Role and Machine Policies ###
 
 The **User Role Policy** and the **Machine Policy** pages in the Remote Control module allow you to notify end-users that a Remote Control session to their machine is about to begin. 
 
@@ -274,7 +274,7 @@ This box is *exclusive* to Remote Control and does not affect file transfer capa
 
 ! The ask permission text can be edited in the text box. Remote Control cannot proceed until the user clicks the "Yes" button. If nothing is clicked after one minute, "No" is assumed and the VSA removes the dialog box from the target machine. The remote control session is canceled. 
 
-###Private Sessions and Logging###
+### Private Sessions and Logging ###
 
 You can start a Kaseya Remote Control session by just clicking on the agent icon whenever this is visible in a VSA page, or via the **Quickview** window. Through the Quickview window, you can also start private Kaseya Remote Control sessions.
 
@@ -284,13 +284,13 @@ Both session types are logged to the agent log which comes in handy when trackin
 
 During Private Sessions, we present the following dialogue to allow for *permanent* or *temporary* configuration changes of RDP (Remote Desktop Protocol) and NLA. With this enhancement, the details of these changes are captured in the VSA Remote Control log: 
 
-###KRC Session Logging###
+### KRC Session Logging ###
 
 The **Remote Control log** allows you to see any recent KRC sessions and whether these were Shared or Private.
 
 ! Kaseya Remote Control logs each time someone connects to a machine. With the Reporting options, you can provide a log of the detailed Remote Control usage to authorized personnel.
 
-###Types of Remote Control###
+### Types of Remote Control ###
 
 *Types of Remote Control*
 
@@ -300,7 +300,7 @@ The **Remote Control log** allows you to see any recent KRC sessions and whether
 
 Remote Control and Live Connect options inside the Quickview window. You can also launch KRC by clicking the agent icon in the VSA UI.
 
-###Launching KRC###
+### Launching KRC ###
 
 Kaseya Remote Control is installed as a viewer/server pair of applications: the viewer on the administrator's local machine and the server on the remote agent machine. 
 
@@ -322,7 +322,7 @@ From there, click on any of the listed '*'.*webm* video recording files to downl
 
 - **Show Mouse**: This functionality allows the administrator to observe the end-users mouse movements. Now the administrator mouse cursor has priority over the end-users mouse when both are using the mouse simultaneously.
 
-###Kaseya Live Connect###
+### Kaseya Live Connect ###
 
 Kaseya Live Connect is a single-machine user interface that replaces the legacy plugin-based Live Connect. The Live Connect application has been redesigned to use a Material Design look and feel. It also now runs on the local machine independent of the browser used to log into the VSA.
 
@@ -340,9 +340,9 @@ The **KLC** interface has a menu of tabbed property sheets that provides access 
 
 - **Mobile** - Live Connect supports connection to mobile devices such as tablets. 
 
-##Views##
+## Views ##
 
-###Overview###
+### Overview ###
 
 **What are Agent Views?**
 
@@ -356,13 +356,13 @@ Machine filters are always in the top-left pane of the VSA next to the toolbox. 
 
 ! Agent Views and Machine Filters allow easy identification and sorting of machines. Additionally, configuration settings and policies can be easily applied to machines based on specific Agent Views.
 
-###Machine Filters###
+### Machine Filters ###
 
 Use the Machine Group filter to find endpoints that are part of a Machine Group or an Organization.
 
 You can click the **Reset** button on your right-hand side to remove a filter. If you'd like to keep the Machine Group filter in place and search for other Machine Ids, just click the **X** next to the magnifying glass and type the new name.
 
-###Creating and Using Basic Views###
+### Creating and Using Basic Views ###
 
 Agent Views are a list of settings that Kaseya VSA will verify against, making any Agent with these settings visible. These Agent Views can have pre-defined content or can be created to have specific filters or settings.
 
@@ -390,7 +390,7 @@ The view will return any agents that meet the criteria you specified when creati
 
 ! Since the view is set to reference a specific Machine Group, the Machine Group filter will be grayed out. You will have to clear the view itself to be able to manually select another group.
 
-###Creating Advanced Views###
+### Creating Advanced Views ###
 
 Advanced filtering lets you design complex searches to isolate data to only the values you want. These views are created using fields that require certain unique values to be entered. Applying several Advanced Filters will refine the scope of Agents available.
 
@@ -402,9 +402,9 @@ Advanced filtering gives you the ability to add operators combined with a desire
 
 Some of the operations include nested operators, AND, OR, NOT, <=, >=, and Agent Version.
 
-##Scheduling and Executing Reports##
+## Scheduling and Executing Reports ##
 
-###Overview###
+### Overview ###
 
 Once reports have been built, they can be run immediately, or on a defined schedule. 
 
@@ -412,7 +412,7 @@ Similar to other functions throughout the VSA, a schedule can occur either once,
 
 The **Info Center > Reports** page
 
-###Scheduling & Executing Reports###
+### Scheduling & Executing Reports ###
 
 **Execute a report immediately**
 
@@ -428,7 +428,7 @@ The available options after clicking **Run Now**. Whenever you specify your crit
 
 ! The data is gathered in real-time. The report is generated and will display any report parts that were included in the building of the report layout. You will be able to immediately review the returned data but note that the report is not stored for future reference.
 
-###Schedule an individual report###
+### Schedule an individual report ###
 
 Navigate to **Info Center > Reporting > Reports** and expand the folder where the report lives. Then, click the **Schedule** button. See the interaction below to explore the different tabs of the scheduler.
 
@@ -444,7 +444,7 @@ The **Schedule** tab allows you to define the recurrence and its options. As wit
 
 - If multiple reports are to be scheduled, they *must* each be scheduled *individually*, even if the recipient of all reports is the same. Use **Report Sets** to schedule multiple reports to the same recipients at one time.
 
-###Report History###
+### Report History ###
 
 After the reports have been executed, you can review the historical reports. The **Schedule** page of the Info Center includes all reports and report sets published using the same scope under which you are currently logged in.  
 
