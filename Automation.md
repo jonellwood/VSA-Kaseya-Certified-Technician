@@ -34,7 +34,7 @@ If an alarm is not applied as an Alarm Action, there will be *no* records of the
 
 Alarms can help quickly identify agents that require attention. However, excessive amounts of alarm creation can cause a negative impact on the performance of the Kaseya VSA.
 
-### Tickets
+#### Tickets
 
 Applying the Create Ticket Alarm Action __will__ create a new ticket within Service Desk or Ticketing modules for every monitor that triggers an Alarm State.
 
